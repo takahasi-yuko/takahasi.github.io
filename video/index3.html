@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcsetによる画像</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            vertical-align: bottom;
+            max-width: 100%;
+        }
+        .main-visual{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-visual">
+        <picture>
+            <source srcset="(min-width:961px)" srcset="img/01.jpg.jpg 1200w">
+            <source srcset="(min-width:601px)" srcset="img/02.jpg.jpg 960w">
+            <source srcset="(max-width:600px)" srcset="img/03.jpg.jpg 600w">
+            <img src="img/03.jpg.jpg" alt="">
+        </picture>
+        <img src="img/01.jpg.jpg" alt="">
+    </div>
+    
+</body>
+</html>
